@@ -1,0 +1,163 @@
+\documentclass[12pt,english]{article}%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+%\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{eurosym}
+\usepackage{cancel}
+\usepackage{amssymb}%
+\usepackage{subfig}
+\setcounter{MaxMatrixCols}{30}
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+\renewcommand{\baselinestretch}{1.3}
+\renewcommand{\arraystretch}{1.2}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}{-1.5\baselineskip}{0.8\baselineskip}{\normalfont\large\centering}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}{-0.1\baselineskip}{0.5\baselineskip}{\normalfont\bf\flushleft}}
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname
+\hspace{+0mm}\large{.}\hspace{+1.9mm}}
+\renewcommand{\@seccntformat}[2]{\csname the#1\endcsname
+\hspace{+0mm}\large{.}\hspace{+1.9mm}}
+\makeatother
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem{acknowledgement}{Acknowledgement}
+\newtheorem{algorithm}{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{criterion}{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}{Notation}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\setlength{\textwidth}{17cm} \setlength{\textheight}{22cm}
+\addtolength{\oddsidemargin}{-15mm} \addtolength{\topmargin}{-5mm}
+\renewcommand{\theequation}{\arabic{equation}}
+\setlength{\parskip}{1mm}
+\newlength{\extraspace}
+\setlength{\extraspace}{.5mm}
+\newlength{\extraspaces}
+\setlength{\extraspaces}{2.5mm}
+\def\inbar{\,\vrule height1.5ex width.4pt depth0pt}
+\font\rms=cmr12 at 12pt
+\def\ce{\relax\ifmmode\mathchoice
+{\hbox{$\inbar\kern-.3em{\rm C}$}} {\hbox{$\inbar\kern-.3em{\rm C}$}}
+{\lower.9pt\hbox{\rms $\inbar\kern-.3em{\rm C}$}} {\lower1.2pt\hbox{\rms
+$\inbar\kern-.3em{\rm C}$}} \else{$\inbar\kern-.3em{\rm C}$}\fi}
+\font\cmss=cmss12 \font\cmsss=cmss12 at 12pt
+\def\ze{\relax\ifmmode\mathchoice
+{\hbox{\cmss Z\kern-.4em Z}}{\hbox{\cmss Z\kern-.4em Z}} {\lower.9pt\hbox{\cmsss
+Z\kern-.4em Z}} {\lower1.2pt\hbox{\cmsss Z\kern-.4em Z}}\else{\cmss Z\kern-.4em Z}\fi}
+\newcommand{\refsection}[1]{
+\vspace{1mm} \pagebreak[3] \addtocounter{section}{1}
+\begin{center}
+{\large #1}
+\end{center}
+\nopagebreak
+\medskip
+\nopagebreak}
+\def\thebibliography#1{\refsection{\bf References}\list
+{\relax}{\itemsep=0pt \parsep=5pt
+\usecounter{enumiv}\leftmargin=3em\itemindent=-\leftmargin} \def\newblock{\hskip .11em plus .33em minus .07em}
+\sloppy\clubpenalty4000\widowpenalty4000
+\sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+\newcommand{\startappendix}{
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}}
+\newcommand{\newappendix}[1]{
+\vspace{3mm} \pagebreak[3] \addtocounter{section}{1} \setcounter{equation}{0}
+\setcounter{subsection}{0}
+\begin{center}
+{\large Appendix \thesection. #1} \vspace{0mm}
+\end{center}
+\nopagebreak \vspace{-1mm}
+\nopagebreak}
+\makeatother
+
+\newenvironment{jan}{\color{red}{ }{}}
+
+\begin{document}
+
+\title{Can cream-skimming encourage prevention?}
+\author{Hana Marie Smr\u{c}kov\'{a}\thanks {University of Economics in Prague}}
+\maketitle
+
+\begin{abstract}
+\noindent This paper investigates whether cream-skimming practices by health care insurers can increase the level of sport-related prevention undertaken by the insured. Under specified conditions, contracting with healthier insured is more profitable for health care insurers. One way to attract such insured is to practice cream-skimming by offering them prevention-related benefits, such as a fitness membership. We compare the levels of prevention induced by a risk-rated contract that is used as a benchmark case and by a community-rated contract with preventive benefits. The theoretical analysis shows that higher levels of prevention resulting from the community-rated contract can be expected when people suffer from bounded willpower and discount future heavily.
+ 
+\medskip
+\noindent\textbf{Keywords:} health insurance, cream-skimming, time-inconsistent preferences, prevention, physical activity
+
+\medskip
+
+\noindent\textbf{JEL classification}: I12, I13, I18, Z2
+
+\end{abstract}
+
+\newpage
+
+\section{Introduction}
+Cream-skimming is conventionally seen as a harmful practice because it can spin the “insurance death spiral”: This means that the less healthy people are concentrated into few unstable plans with escalating premiums; eventually, these high-risk people might be even excluded from buying the insurance \citep{cooper2012}. From this point of view, clearly, cream-skimming is an undesirable development. However, as we argue in this article, there is also a likely positive effect of cream-skimming practices. In particular, it increases the level of sport-related prevention undertaken by insured. Because healthy people are more likely to be interested in goods related to active lifestyle and physical activity, insurers often try to attract them by offering benefits like discounted or free sport participation \citep{paolucci2007}. These benefits lower the costs of sports and motivate the insured to be more active than they would be otherwise. In other words, sport is a successful marketing strategy of health insurers as well as health improving physical activity. In short, provision of sports goods by cream-skimming insurers can be seen as a provision of a type of health prevention.  
+
+\section{Level of prevention under various contracts}
+As explained, this article studies the effects of cream-skimming on the conduct of the insured. To be able to study the effects it is necessary to specify also the alternative scenarios; in particular it is necessary to specify the alternative insurance contracts that the insured can be offered. The Rothschild Stiglitz model \citep{rotschild1976} provides an ideal departure point for this research since it provides a natural benchmark to compare the cream-skimming contract with; Namely the risk-rating (RR) health insurance market setting.\footnote{RR is identical to case of imperfect information.}   
+
+The decision about the level of prevention under each of contracts can be represented by the following two-period model. Assume that all individuals live for two periods and that they derive their utility directly from their health status. $H^j$ denotes expected health for type $j=l,h$ and $U(H^l)>U(H^h)$. Further, $Y$ is the lifetime income that an insured can consume. In the first period all people are born as LR types. Each individual knows that with some probability $p$ she stays healthy for the second period. This probability is influenced by the level of prevention she takes in the first period. However, prevention is costly; that is to say that income needs to be used on it instead of on consumption. Let $c(p)$ denote the cost function of this prevention that is increasing and convex $(c'(p),c''(p) >0)$. In the second period, an individual does not take any prevention since she will die anyway at the end of the period. At the beginning of each period an individual is obliged to buy full insurance at premium $\gamma$.
+
+In general, the lifetime expected utility of an individual consists of the utility in period one plus discounted expected utility in period two. Each individual derives it from income (Y) less premium in a given regime $\gamma^r$ $(r=l, h, P)$, less investment in prevention and plus good health status in the first period. In the second period, an individual's expected utility is the probability of good or bad health times the utility from good or bad health. In particular, the utility from staying in good LR state is $U^l=H^l-\gamma^r$; in contrast, $U^h=H^h-\gamma^r$ represents the utility in the case of illness. Since the probability of staying in the good health state is determined by the level of prevention, the privately optimal level of prevention is obtained by the maximization of expected utility with respect to this probability. The resulting first order condition represented by the equation (1) shows that an individual will invest in prevention until the marginal increase in costs is equal to the discounted utility gain of prevention. Note that the difference in utilities depends on the contracts offered on the health insurance market; in particular it depends on the way how the premium is set.
+$$EU=Y-\gamma^r-c(p)+H^l+\delta[pU^l+(1-p)U^h]$$
+\begin{equation}
+c'(p)=\delta(U^l-U^h)
+\end{equation}
+  
+First consider the situation in a RR market. In this market, an individual pays a fair premium that is adjusted to her risk-type $(\gamma^h>\gamma^l)$. In period one, the individual is always a LR type and therefore pays premium $\gamma^l$. In period two, she can either stay a LR type and still pay $\gamma^l$, or she can become a HR type and, thus, newly pay $\gamma^h$. As a result, the utility of staying in the LR state is $U^l=H^l-\gamma^l$, whereas $U^h=H^h-\gamma^h$ represents the individual's utility in case of illness. The first order condition shows that under RR, the level of prevention is increasing in the difference between the health utility gains $(\Delta{H}=H^l-H^h)$ as well as in the monetary savings resulting from the difference between the premiums $(\Delta\gamma=\gamma^h-\gamma^l)$.   
+\begin{equation}
+c'(p)=\delta(\Delta{H}+\Delta\gamma)
+\end{equation}
+
+Second, there is the CR market. Here all insured pay the pooling premium ($\gamma^{P}$) regardless of their risk type. The fact that the premium is independent from the risk type means that the only motivation that an insured has to improve her health by taking preventive measures is the utility that she derives from the health itself. To specify, as shown in the equation below, an individual is motivated to invest into the prevention only until marginal costs of prevention equal to marginal health utility gain. In other words, in contrast to RR, the monetary incentive disappears. Consequently, RR dominates CR as regards the level of prevention. 
+
+\begin{equation}
+c'(p)=\delta(\Delta{H})
+\end{equation}
+
+The third identified equilibrium is a CR market with cream-skimming insurers. On this market, insurers charge a uniform premium to all their insured and, at the same time, give away a sport-related benefit $b$.\footnote{For the sake of clarity, this benefit times costs of prevention gives the costs of sport beared by cream-skimming insurer in the previous section: $c_{sport}=bc(p)$} CRCS brings a higher level of prevention than pure CR because it again introduces a monetary aspect to being HR compared to LR. Viewed from another perspective, if an individual is healthy and eligible for the contract that is meant for LR types, this contract reduces her price for the future health utility gain. Thus, from the social point of view, also CRCS dominates CR regarding the level of prevention.  
+
+\begin{equation}
+c'(p)=\delta\frac{(\Delta{H})}{(1-b)}\footnote{Note that the first order condition (4) is not entirely precise. So far, I have considered that each individual is born as a LR type and lives for two periods. In this world, however, an insurer does not have any incentive to skim in the first period when every insured is LR. To model the situation precisely, it would be necessary to consider a model of overlapping generations. Unlike the presented framework, the overlapping generations model would consider three types of insured in the first period (old HR, old LR and young LR) and thus the insurer would be motivated to select risk. Nevertheless, since the technical problem of the presented framework has no effect on the outcome, I stick to it for the sake of simplicity.}
+\end{equation}
+
+The relationship between RR and CRCS with regard to the level of prevention is ambiguous. Whether CRCS outperform RR depends on the factor $\delta$ by which the insured discount their future. 
+
+Assume that the government considers that citizens should take care about their future seriously and that the correct discount factor is (close to) 1. Consequently, insured with $\delta=1$ undertake the socially optimal level of prevention under RR where beside the utility from health also the expected health care costs are reflected. In other words, RR contract in the world where the insured have $\delta=1$ constitutes the first best outcome. 
+
+However, the condition $\delta=1$  is likely to be violated on the markets related to health. In the case when people are impatient and $\delta<1$, RR prevention level is no longer socially optimal since people discount the future utility gains from today's investment in prevention. In other words, they are willing to invest less of their current money in order to induce better health state in the following period. Now, it is possible to see the CRCS setting as a kind of nudging device; the money taken from the LR types in one period prepay the cheaper prevention in the following period. Thus, cream-skimming reduces price of the future good state and consequently it is more likely that the future utility gains will outweigh current costs of prevention. CRCS outperforms RR and shifts the prevention level closer to the first best outcome if the insurer pays the sufficient share of prevention costs; or, in other words, if $b$ is close enough to 1 as can be seen from equation (4). 
+
+\section{Conclusion}  
+Usually, the negative effects of cream-skimming are stressed. This article shows that cream-skimming can theoretically bring also positive effect; Namely it may lead to greater prevention among the insured than a risk rating setting on the health insurance market. The theoretical analysis shows that skimming practice giving away sport-related benefits -- that are valuable enough -- leads to more prevention and is welfare enhancing if people suffer from bounded willpower and discount future heavily. 
+\bibliographystyle{plainnat} 
+\bibliography{neco}
+\pagebreak
+
+\end{document}
+
+
